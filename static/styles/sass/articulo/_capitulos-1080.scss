@@ -1,0 +1,244 @@
+#capitulos-articulo{
+    padding-top:24px;
+    & > .cabecera{
+        height:95px;
+
+        & > .linea-filtro-t{
+            height:63px;
+            padding-left:15px;
+            & > .filtro{
+                height:100%;
+                float:left;
+            }
+        }
+        & > .linea{
+            height:32px;
+            padding-left:40px;
+            padding-right:40px;
+            & > .cuenta{
+                font-size: 20px;
+                font-weight: bold;
+                color:white;
+                height:100%;
+                display: flex;
+                align-items: center;
+
+                & > #parcial-capitulos{
+                    margin-right:8px;
+                }
+                & > #total-capitulos{
+                    margin-left:8px;
+                }
+            }
+        }
+
+    }
+
+    & > .marco-capitulos{
+        height:137px;
+        box-sizing: border-box;
+        position:relative;
+        overflow:hidden;
+
+        & > .marco{
+            height:100%;
+            box-sizing: border-box;
+            margin-left:auto;
+            margin-right:auto;
+            padding-left:16px;
+            padding-right:16px;
+            overflow:hidden;
+            & > .scroller{
+                padding-top:32px;
+                padding-bottom:32px;
+                position:relative;
+                left:0;
+                box-sizing: border-box;
+                height:100%;
+                display:grid;
+                grid-auto-flow: column;
+                grid-column-gap: 16px;
+                & > .capitulo{
+                    float:left;
+                    //height:97px;
+                    //width:172px;
+                    cursor:pointer;
+                    background-color:black;
+                    @include animacion(250ms, ease-in);
+                    position:relative;
+                    & > .imagen{
+                        height:100%;
+    
+                        & > img{
+                            @include img(100%,100%);
+                        }
+                    }
+
+                    & > .cubierta-orden{
+                        position:absolute;
+                        z-index:3;
+                        height:100%;
+                        width:100%;
+                        padding:8px;
+                        top:0;
+                        left:0;
+                        border:solid 2px transparent;
+                        box-sizing:border-box;
+
+                        & > .orden{
+                            font-weight: bold;
+                            color:white;
+                            font-size:24px;
+                            position:absolute;
+                            bottom:13px;
+                            left:13px;
+                        }
+                    }
+
+                    & > .cubierta{
+                        position:absolute;
+                        z-index:2;
+                        height:100%;
+                        width:100%;
+                        padding:13px;
+                        top:0;
+                        left:0;
+                        border:solid 2px rgba($enfasis,.64);
+                        box-sizing:border-box;
+                        opacity:0;
+                        @include animacion(250ms,ease-in);
+                        background-color:rgba(black,.4);
+
+                        & > .progress-shadow{
+                            height:3px;
+                            border-radius: 3px;
+                            background-color:black;
+                            margin-bottom:6px;
+                            
+                            & > .progress-bar{
+                                height:3px;
+                                border-radius:3px;
+                                width:20%;
+                                background-color:$enfasis;
+                                
+
+                            }
+                        }
+
+                        & > .tiempo{
+                            font-size: 18px;
+                            font-weight: 300;
+                            color:white;
+                            & > .total-tiempo{
+                                margin-left:8px;
+                                color:$disable;
+                            }
+                        }
+
+                        & > .boton-play{
+                            height:47px;
+                            width:47px;
+                            position:absolute;
+                            box-sizing: border-box;
+                            top:calc(50% - 22px);
+                            left:calc(50% - 22px);
+                            border-radius:27px;
+                            display: flex;
+                            align-items: center;
+                            padding-left:16px;
+                            @include animacion(500ms, ease-in);
+                            transform:translateY(16px);
+                            & > i{
+                                font-size:24px;
+                                color:$enfasis;
+                               
+                            }
+                        }
+                    }
+    
+                    &:hover{
+                        transform:translateY(-8px);
+                        box-shadow: 0px 0px 24px 1px rgba($enfasis,.75);
+                        animation: resplandor 2000ms ease-in infinite;
+                        & > .cubierta{
+                            opacity:1;
+
+                            & > .boton-play{
+                                transform:translateY(0px);
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+
+        & > .control-scroll{
+            height:97px;
+            position:absolute;
+            z-index:2;
+            @include animacion(250ms,ease-in);
+            width:100px;
+            top:32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+
+            &[data-estado="inactivo"]{
+                display:none;
+            }
+
+            &[data-estado="activo"]{
+                display:flex;
+            }
+            &[data-sentido="left"]{
+                left:0;
+                
+            }
+    
+            &[data-sentido="right"]{
+                right:0;
+            }
+    
+            & > i{
+                font-size:52px;
+                color:inherit
+            }
+    
+            &:hover{
+                background-color:rgba(black,.64);
+                color:$enfasis;
+               
+            }
+        }
+    }
+
+    & #muestra-capitulos{
+        height:95px;
+        position:absolute;
+        top:24px;
+        right:40px;
+        padding-top:18px;
+
+        & > .orden{
+            text-align: right;
+            font-size:24px;
+            color:$enfasis;
+            font-weight: bold;
+            text-shadow:0px 0px 16px rgba($enfasis,0.7);
+            line-height: 1.4;
+            margin-bottom:6px;
+        }
+
+        & > .titulo{
+            text-align: right;
+            font-size:24px;
+            font-weight: bold;
+            color:white;
+            text-shadow:0px 0px 16px rgba(white,0.7);
+            line-height: 1.4;
+        }
+    }
+}

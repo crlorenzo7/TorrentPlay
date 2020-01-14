@@ -1,0 +1,414 @@
+.filtro-inner{
+    height: 63px;
+    color: white;
+    width:  427px;
+    position:  relative;
+    margin-left:38px;
+
+    & > .linea-filtro{
+        height:  100%;
+        width: 100%;
+
+        & > .label-filtro{
+            height:  100%;
+            float: left;
+            display:  flex;
+            align-items:  center;
+            width: calc(100% - 35px);
+            box-sizing:  border-box;
+            padding-right: 24px;
+            font-weight: bold;
+            padding-left: 24px;
+            font-size:24px;
+        }
+
+        & > .icono {
+            width:35px;
+            float:left;
+            align-items: center;
+            display: flex;
+            height:100%;
+            & > .container-icon-select{
+                color: white;
+                height: 35px;
+                float: left;
+                width: 35px;
+                border-radius:24px;
+                border:solid 2px white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+    
+                & > i{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        
+    }
+
+    & > .cubierta-filtro{
+        position:absolute;
+        z-index: 13;
+        background-color: $dark;
+        width:calc(100% + 32px);
+        height:63px;
+        top:0px;
+        left:-16px;
+        opacity:0;
+        overflow:hidden;
+        border-radius: 16px;
+        box-shadow: 0px -8px 24px 1px rgba(0,0,0,0.7);
+
+        & > .lista-select{
+            padding-bottom:16px;
+            overflow-y:auto;
+            position: absolute;
+            width: 100%;
+            top:63px;
+            & > .option-select{
+                height:63px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                cursor:pointer;
+                padding-left:40px;
+                font-weight: bold;
+                font-size: 24px;
+                color:white;
+                @include animacion(250ms,ease-in);
+                border-bottom:solid 2px rgba(0,0,0,0.3);
+
+                &:hover{
+                    background-color:rgba(0,0,0,0.3);
+                }
+            }   
+        }
+        & > .opcion-seleccionada{
+            height:63px;
+            top:0px;
+            position: absolute;
+            box-sizing: border-box;
+            left:0;
+            width:100%;
+            color:$enfasis;
+            border-bottom:solid 2px rgba(0,0,0,0.3);
+
+            & > .label-filtro-cubierta{
+                height:  100%;
+                float: left;
+                display:  flex;
+                align-items:  center;
+                width: calc(100% - 51px);
+                box-sizing:  border-box;
+                padding-right: 24px;
+                font-weight:  bold;
+                padding-left: 40px;
+                font-size:24px;
+            }
+
+            & > .icono {
+                width:35px;
+                float:left;
+                align-items: center;
+                display: flex;
+                height:100%;
+
+                & > .container-icon-select-cubierta{
+                    color: white;
+                    height: 35px;
+                    float: left;
+                    width: 35px;
+                    border-radius:25px;
+                    border:solid 2px white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-sizing: border-box;
+
+                    & > i{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.filtro-temporada{
+    height: 63px;
+    color: white;
+    width:  284px;
+    position:  relative;
+
+    & > .linea-filtro{
+        height:  100%;
+        width: 100%;
+
+        & > .label-filtro{
+            height:  100%;
+            float: left;
+            display:  flex;
+            align-items:  center;
+            width: calc(100% - 35px);
+            box-sizing:  border-box;
+            padding-right: 24px;
+            font-weight: 300;
+            padding-left: 24px;
+            font-size:24px;
+        }
+
+        & > .icono {
+            width:35px;
+            float:left;
+            align-items: center;
+            display: flex;
+            height:100%;
+            & > .container-icon-select{
+                color: white;
+                height: 35px;
+                float: left;
+                width: 35px;
+                border-radius:24px;
+                border:solid 2px white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+    
+                & > i{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        
+    }
+
+    & > .cubierta-filtro{
+        position:absolute;
+        z-index: 13;
+        background-color: $dark;
+        width:calc(100% + 32px);
+        height:63px;
+        top:0px;
+        left:-16px;
+        opacity:0;
+        overflow:hidden;
+        border-radius: 16px;
+        box-shadow: 0px -8px 24px 1px rgba(0,0,0,0.7);
+
+        & > .lista-select{
+            padding-bottom:16px;
+            overflow-y:auto;
+            position: absolute;
+            width: 100%;
+            top:63px;
+            & > .option-select{
+                height:63px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                cursor:pointer;
+                padding-left:40px;
+                font-weight: 300;
+                font-size: 24px;
+                color:white;
+                @include animacion(250ms,ease-in);
+                border-bottom:solid 2px rgba(0,0,0,0.3);
+
+                &:hover{
+                    background-color:rgba(0,0,0,0.3);
+                }
+            }   
+        }
+        & > .opcion-seleccionada{
+            height:63px;
+            top:0px;
+            position: absolute;
+            box-sizing: border-box;
+            left:0;
+            width:100%;
+            color:$enfasis;
+            border-bottom:solid 2px rgba(0,0,0,0.3);
+
+            & > .label-filtro-cubierta{
+                height:  100%;
+                float: left;
+                display:  flex;
+                align-items:  center;
+                width: calc(100% - 51px);
+                box-sizing:  border-box;
+                padding-right: 24px;
+                font-weight:  300;
+                padding-left: 40px;
+                font-size:24px;
+            }
+
+            & > .icono {
+                width:35px;
+                float:left;
+                align-items: center;
+                display: flex;
+                height:100%;
+
+                & > .container-icon-select-cubierta{
+                    color: white;
+                    height: 35px;
+                    float: left;
+                    width: 35px;
+                    border-radius:24px;
+                    border:solid 2px white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-sizing: border-box;
+
+                    & > i{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.filtro-calidad{
+    height: 47px;
+    color: white;
+    width:  332px;
+    position:  relative;
+
+    & > .linea-filtro{
+        height:  100%;
+        width: 100%;
+
+        & > .label-filtro{
+            height:  100%;
+            float: left;
+            display:  flex;
+            align-items:  center;
+            width: calc(100% - 35px);
+            box-sizing:  border-box;
+            padding-right: 24px;
+            font-weight: 300;
+            padding-left: 24px;
+            font-size:20px;
+        }
+
+        & > .icono {
+            width:35px;
+            float:left;
+            align-items: center;
+            display: flex;
+            height:100%;
+            & > .container-icon-select{
+                color: white;
+                height: 35px;
+                float: left;
+                width: 35px;
+                border-radius:24px;
+                border:solid 2px white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+    
+                & > i{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        
+    }
+
+    & > .cubierta-filtro{
+        position:absolute;
+        z-index: 13;
+        background-color: $dark;
+        width:calc(100% + 32px);
+        height:30px;
+        top:0px;
+        left:-16px;
+        opacity:0;
+        overflow:hidden;
+        border-radius: 16px;
+        box-shadow: 0px -8px 24px 1px rgba(0,0,0,0.7);
+
+        & > .lista-select{
+            padding-bottom:16px;
+            overflow-y:auto;
+            position: absolute;
+            width: 100%;
+            top:47px;
+            & > .option-select{
+                height:47px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                cursor:pointer;
+                padding-left:40px;
+                font-weight: 300;
+                font-size: 20px;
+                color:white;
+                @include animacion(250ms,ease-in);
+                border-bottom:solid 2px rgba(0,0,0,0.3);
+
+                &:hover{
+                    background-color:rgba(0,0,0,0.3);
+                }
+            }   
+        }
+        & > .opcion-seleccionada{
+            height:49px;
+            top:0px;
+            position: absolute;
+            box-sizing: border-box;
+            left:0;
+            width:100%;
+            color:$enfasis;
+            border-bottom:solid 2px rgba(0,0,0,0.3);
+
+            & > .label-filtro-cubierta{
+                height:  100%;
+                float: left;
+                display:  flex;
+                align-items:  center;
+                width: calc(100% - 51px);
+                box-sizing:  border-box;
+                padding-right: 24px;
+                font-weight:  300;
+                padding-left: 40px;
+                font-size:20px;
+            }
+
+            & > .icono {
+                width:35px;
+                float:left;
+                align-items: center;
+                display: flex;
+                height:100%;
+
+                & > .container-icon-select-cubierta{
+                    color: white;
+                    height: 35px;
+                    float: left;
+                    width: 35px;
+                    border-radius:25px;
+                    border:solid 2px white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-sizing: border-box;
+
+                    & > i{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,193 @@
+#promo{
+    overflow:hidden;
+
+    & > .scroller{
+        height:100%;
+        left:0;
+        width:500%;
+        position:relative;
+
+        & > .pagina{
+            float:left;
+            width:20%;
+            height:100%;
+            position:relative;
+            & > .columna{
+                float:left;
+                width:50%;
+                height:100%;
+                position:relative;
+                box-sizing: border-box;
+                padding:40px;
+                & .promo{
+                    height:100%;
+
+                    & > .titulo{
+                        font-size:24px;
+                        color:$enfasis;
+                        line-height: 1.4;
+                        font-weight: bold;
+                        text-shadow: 0px 0px 10px rgba($enfasis,.7);
+                        margin-bottom:20px;
+                    }
+
+                    & > .sinopsis{
+                        font-size:14px;
+                        font-weight: 300;
+                        color:white;
+                        //max-height: 70px;
+                        line-height: 1.4;
+                        margin-bottom:10px;
+                        //overflow-y:auto;
+                   }
+
+                   & > .controles{
+                       height:28px;
+
+                       & > .boton{
+                           float:left;
+                           margin-right:8px;
+                           height:28px;
+                           width:28px;
+                           border-radius: 16px;
+                           
+                           display: flex;
+                           align-items: center;
+                           padding-left:6px;
+                           box-sizing: border-box;
+                           
+                           cursor:pointer;
+                           @include animacion(250ms,ease-in);
+                           &[data-estado="inactivo"]{
+                                border:solid 1px white;
+                                color:white;
+                                &:hover{
+                                    background-color:rgba(black,.64);
+                                    color:$enfasis;
+                                    border:solid 1px $enfasis;
+                                
+                                    
+                                }
+                                
+                            }
+                            &[data-estado="activo"]{
+                                border:solid 1px $enfasis;
+                                background-color:rgba(black,.64);
+                                color:$enfasis;
+                                box-shadow: 0px 0px 5px 1px rgba($enfasis,0.7);
+                                
+                            }
+
+                           & > i{
+                               color:inherit;
+                               font-size:12px;
+                           }
+
+                          
+                       }
+
+                       & > .boton-long{
+                            float:left;
+                            margin-right:8px;
+                            height:28px;
+                            border-radius: 16px;
+                            border:solid 1px white;
+                            display: flex;
+                            box-sizing: border-box;
+                            padding-left:10px;
+                            align-items: center;
+                            color:white;
+                            cursor:pointer;
+                            @include animacion(250ms,ease-in);
+
+                            & > figure{
+                                float:left;
+                                height:26px;
+                                width:26px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color:inherit;
+                                & > i{
+                                    color:inherit;
+                                    font-size:12px;
+                                }
+                            }
+
+                            & > .label{
+                                float:left;
+                                width:calc(100% - 26px);
+                                font-size:12px;
+                                padding-right:15px;
+                                color:inherit;
+                            }
+                            
+
+                            &:hover{
+                                background-color:rgba(black,.64);
+                                color:$enfasis;
+                                border:solid 1px $enfasis;
+                            }
+                       }
+                   }
+
+                }
+
+                & > .boton-play{
+                    position:absolute;
+                    height:102px;
+                    width:102px;
+                    top:calc(50% - 51px);
+                    left:calc(50% - 51px);
+                    border-radius: 60px;
+                    border:solid 3px white;
+                    box-sizing: border-box;
+                    padding-left:30px;
+                    display: flex;
+                    align-items: center;
+                    color:white;
+                    cursor:pointer;
+                    @include animacion(250ms, ease-in);
+                    & > i{
+                        font-size:46px;
+                        color:inherit;
+                    }
+
+                    &:hover{
+                        background-color:rgba(black,.64);
+                        border:solid 3px $enfasis;
+                        color:$enfasis;
+                        box-shadow: 0px 0px 15px rgba($enfasis,.7);
+                        animation:resplandor 2000ms ease-in infinite;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#promo-slider{
+    overflow:hidden;
+    background-color:white;
+    & > .scroller{
+        height:100%;
+        left:0;
+        width:500%;
+        position:relative;
+        
+        & > .pagina{
+            float:left;
+            width:20%;
+            height:100%;
+            position:relative;
+            overflow: hidden;
+            & > img{
+                @include img(auto,100%);
+            }
+        }
+    }
+}
+
+@media (min-width:1600px) and (min-height:800px){
+    @import "home/promo-1080";
+}

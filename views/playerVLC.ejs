@@ -1,0 +1,79 @@
+
+<embed class="player"  id="screen" style="height:100%;width:100%;" type="application/x-mpvjs">
+<figure id="poster-player" class="fill"></figure>
+<div id="cover-player">
+    <header class="toolbar">
+        <h2 class="titulo"></span></h2>
+        
+    </header>
+    <div class="nav">
+        
+        <div class="boton" id="subtitle-control" data-type="boton" data-estado="inactive" data-action="activar-subtitulos" data-component="controls">
+            <i class="moviefinder-icons">subs</i>
+        </div>
+        <div class="boton" id="download-control" data-type="boton" data-action="descargar" data-component="controls">
+            <i class="moviefinder-icons">descarga</i>
+        </div>
+        <div class="boton" data-type="boton" data-action="maximize" data-component="controls">
+            <i class="moviefinder-icons">maximizar</i>
+        </div>
+        <div class="separator" data-component="controls"></div>
+        
+        <div class="boton" data-type="boton" data-action="close-player">
+            <i class="moviefinder-icons">cerrar</i>
+        </div>
+    </div>
+
+    <div id="controls-continer" class="big-controls">
+        <div class="cubre-botones" data-component="launcher">
+        
+        <div class="boton" data-tam="big" data-type="boton">
+            <i class="moviefinder-icons">play</i>
+        </div>
+        </div>
+        <div class="cubre-calidades-re" data-component="launcher">
+            
+        </div>
+       
+    </div>
+    <footer id="info-video">
+        <div class="progress-bar" id="progress-time" data-component="controls">
+            <progress id="progreso" max="100" value="50"></progress>
+            <div id="current-cursor" class="cursor"></div>
+        </div>
+        <div class="toolbar">
+            <p class="zona-tiempo" data-component="controls">
+                <span class="parcial-tiempo" id="ptiempo">00:00:00</span> / <span class="total-tiempo" id="ttiempo">00:00:00</span>
+            </p>
+            
+        </div>
+    </footer>
+</div> 
+<div id="download-info" data-estado="visible">
+    <div class="linea-descarga">
+        <div class="linea-downloaded">
+            <p class="zona-info">
+                <span class="parcial" id="parcial-descargado">0</span>
+                /
+                <span class="total" id="total-descargado">0</span>
+            </p>
+        </div>
+        <div class="progress-bar" id="progress-descargado">
+            <div class="fill-bar"></div>
+        </div>
+        <div class="info-torrent">
+            <p class="item peers"><span id="peers">0</span> peers</p>
+            <p class="item speed" id="speed-download">0 MBps</p>
+        </div>  
+    </div>
+</div>
+<div id="buffering">
+    <div class="label">buffering <span id="por-buffer"></span></div>
+    <div class="progress-bar" id="progress-buffer">
+        <div class="fill-bar"></div>
+    </div>
+    <div class="info-torrent">
+        <p class="item peers"><span id="peers-buffer">0</span> peers</p>
+        <p class="item speed" id="speed-buffer">0 MBps</p>
+    </div>
+</div>

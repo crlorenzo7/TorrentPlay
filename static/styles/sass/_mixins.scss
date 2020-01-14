@@ -1,0 +1,23 @@
+@mixin img($height,$width){
+    height:$height;
+    width:$width;
+    line-height: 0;
+    vertical-align: middle;
+}
+@mixin animacion($duracion,$easing) {
+    transition: all $duracion $easing;
+    -webkit-transition: all $duracion $easing;
+    -moz-transition: all $duracion $easing;
+    -o-transition: all $duracion $easing;
+    -ms-transition: all $duracion $easing;
+}
+
+@mixin adaptar-fondo($size,$repeat,$positionAlto:center,$positionAncho:center){
+    background-size: $size;
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -ms-background-size: $size;
+    -o-background-size: $size;
+    background-repeat: $repeat;
+    background-position: $positionAncho $positionAlto;
+}

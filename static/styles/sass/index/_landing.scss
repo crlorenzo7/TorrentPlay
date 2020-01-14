@@ -1,0 +1,18 @@
+#promo-message{
+    position: relative;
+    height:100%;
+    box-sizing: border-box;
+    padding:45px;
+
+    & > p{
+        font-size: 16px;
+        color:white;
+        margin-bottom: 15px;
+        font-weight: 100;
+    }
+}
+
+@media (min-width:1600px) and (min-height:800px){
+    @import "index/landing-1080";
+
+}

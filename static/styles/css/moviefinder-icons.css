@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'moviefinder';
+  src:  url('../fonts/moviefinder.eot?8o10qc');
+  src:  url('../fonts/moviefinder.eot?8o10qc#iefix') format('embedded-opentype'),
+    url('../fonts/moviefinder.ttf?8o10qc') format('truetype'),
+    url('../fonts/moviefinder.woff?8o10qc') format('woff'),
+    url('../fonts/moviefinder.svg?8o10qc#moviefinder') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="moviefinder-icons"], [class*=" moviefinder-icons"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'moviefinder' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.moviefinder-iconsfolder:before {
+  content: "\e932";
+}
+.moviefinder-iconsadd:before {
+  content: "\e900";
+}
+.moviefinder-iconsadd-lista:before {
+  content: "\e901";
+}
+.moviefinder-iconsadd-profile:before {
+  content: "\e902";
+}
+.moviefinder-iconsbasura:before {
+  content: "\e903";
+}
+.moviefinder-iconsbell:before {
+  content: "\e904";
+}
+.moviefinder-iconsbiblioteca:before {
+  content: "\e905";
+}
+.moviefinder-iconsbookmark:before {
+  content: "\e906";
+}
+.moviefinder-iconsclose:before {
+  content: "\e907";
+}
+.moviefinder-iconsdibujo:before {
+  content: "\e908";
+}
+.moviefinder-iconsdown:before {
+  content: "\e909";
+}
+.moviefinder-iconsdownload:before {
+  content: "\e90a";
+}
+.moviefinder-iconsedicion:before {
+  content: "\e90b";
+}
+.moviefinder-iconsempty-bookmark:before {
+  content: "\e90c";
+}
+.moviefinder-iconsempty-star:before {
+  content: "\e90d";
+}
+.moviefinder-iconsfilmaffinity:before {
+  content: "\e90e";
+}
+.moviefinder-iconsforward:before {
+  content: "\e90f";
+}
+.moviefinder-iconsheart:before {
+  content: "\e910";
+}
+.moviefinder-iconsjokert:before {
+  content: "\e911";
+}
+.moviefinder-iconskey:before {
+  content: "\e912";
+}
+.moviefinder-iconsleft:before {
+  content: "\e913";
+}
+.moviefinder-iconsleftt:before {
+  content: "\e914";
+}
+.moviefinder-iconslist:before {
+  content: "\e915";
+}
+.moviefinder-iconslupa-fin:before {
+  content: "\e917";
+}
+.moviefinder-iconsmail:before {
+  content: "\e918";
+}
+.moviefinder-iconsmaximize:before {
+  content: "\e919";
+}
+.moviefinder-iconsmf2:before {
+  content: "\e91a";
+}
+.moviefinder-iconsoff:before {
+  content: "\e91b";
+}
+.moviefinder-iconsoverview2:before {
+  content: "\e91c";
+}
+.moviefinder-iconspause:before {
+  content: "\e91d";
+}
+.moviefinder-iconsperfil:before {
+  content: "\e91e";
+}
+.moviefinder-iconsplayt:before {
+  content: "\e91f";
+}
+.moviefinder-iconspunto:before {
+  content: "\e920";
+}
+.moviefinder-iconsresize:before {
+  content: "\e921";
+}
+.moviefinder-iconsreturn:before {
+  content: "\e922";
+}
+.moviefinder-iconsrewind:before {
+  content: "\e923";
+}
+.moviefinder-iconsright:before {
+  content: "\e924";
+}
+.moviefinder-iconsselected:before {
+  content: "\e925";
+}
+.moviefinder-iconssend:before {
+  content: "\e926";
+}
+.moviefinder-iconsserie:before {
+  content: "\e927";
+}
+.moviefinder-iconsstar:before {
+  content: "\e928";
+}
+.moviefinder-iconsteatro:before {
+  content: "\e929";
+}
+.moviefinder-iconstratk:before {
+  content: "\e92a";
+}
+.moviefinder-iconsturnoff:before {
+  content: "\e92b";
+}
+.moviefinder-iconsup:before {
+  content: "\e92c";
+}
+.moviefinder-iconsusuarios:before {
+  content: "\e92d";
+}
+.moviefinder-iconsvertical-separator:before {
+  content: "\e92e";
+}
+.moviefinder-iconsvideo:before {
+  content: "\e92f";
+}
+.moviefinder-iconssettings:before {
+  content: "\e916";
+}
+.moviefinder-iconscerrar-sesion:before {
+  content: "\e930";
+}
+.moviefinder-iconssubs:before {
+  content: "\e931";
+}

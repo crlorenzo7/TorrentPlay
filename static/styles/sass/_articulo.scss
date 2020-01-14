@@ -1,0 +1,436 @@
+#articulo{
+    padding-top:30px;
+    & > .cabecera{
+        height:30px;
+        padding-left:40px;
+        padding-right:40px;
+        & > .titulo{
+            float:left;
+            height:100%;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 300;
+            color:white;
+
+            & > .spunto{
+                height:100%;
+                display: flex;
+                align-items: center;
+                font-size: 10px;
+                margin-right:7px;
+                margin-left: 7px;
+                color:$enfasis;
+            }
+
+            & > .bold{
+                font-weight: bold;
+            }
+        }
+
+        & > .controles{
+            height:28px;
+            position: relative;
+            top:1px;
+            float:right;
+
+            & > .zona-boton-lista{
+                float:left;
+                height:28px;
+                width:28px;
+                position:relative;
+
+                & > .cover{
+                    height:calc(100% + 10px);
+                    width:calc(100% + 10px);
+                    right:-5px;
+                    top:-5px;
+                    position:absolute;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    background-color:$dark;
+                    display:none;
+                    box-shadow: 0px 5px 10px 1px rgba(0,0,0,1);
+                    z-index:3;
+                    & > header{
+                        box-sizing: border-box;
+                        padding:5px;
+                        padding-left:0px;
+                        padding-right:0px;
+                        height:38px;
+
+                        & > .titulo{
+                            float:left;
+                            height:100%;
+                            width:calc(100% - 38px);
+                            display: none;
+                            align-items: center;
+                            padding-left:15px;
+                            box-sizing:border-box;
+                            overflow: hidden;
+                            opacity:0;
+                            & > p{
+                                font-size:14px;
+                                font-weight: 300;
+                                color:$enfasis;
+                            }
+                        }
+
+                        & > .zona-boton-cover{
+                            width:38px;
+                            height:28px;
+                            box-sizing: border-box;
+                            position:absolute;
+                            right:0;
+                            padding:5px;
+                            padding-top:0px;
+                            padding-bottom:0px;
+
+                            & > .boton-cover{
+                                float:left;
+                                height:28px;
+                                width:28px;
+                                border-radius: 16px;
+                                display: flex;
+                                align-items: center;
+                                padding-left:6px;
+                                box-sizing: border-box;
+
+
+                                &[data-estado="inactivo"]{
+                                    border:solid 1px white;
+                                    color:white;
+                                    &:hover{
+                                        background-color:rgba(black,.64);
+                                        color:$enfasis;
+                                        border:solid 1px $enfasis;
+                                    
+                                        
+                                    }
+                                    
+                                }
+                                &[data-estado="activo"]{
+                                    border:solid 1px $enfasis;
+                                    background-color:rgba(black,.64);
+                                    color:$enfasis;
+                                    box-shadow: 0px 0px 5px 1px rgba($enfasis,0.7);
+                                    
+                                }
+                                & > i{
+                                    color:inherit;
+                                    font-size:12px;
+                                }
+                                cursor:pointer;
+                                @include animacion(250ms,ease-in);
+                            }
+                        }
+                    }
+                    .ul-listas{
+
+                        overflow-x:hidden;
+                        overflow-y:auto;
+                        border-top:solid 1px rgba(black,.3);
+                        display:none;
+                        & > .item{
+                            height:35px;
+                            box-sizing: border-box;
+                            border-bottom:solid 1px rgba(black,.3);
+                            
+
+                            @include animacion(250ms,ease-in);
+                            cursor:pointer;
+
+                            &[data-estado="activo"]{
+                                color:$enfasis;
+                                
+                                & > .label{
+                                    text-shadow: 0px 0px 5px rgba($enfasis,.7);
+                                }
+                                & > .boton-add-lista{
+                                    & > i{
+                                        transform:rotate(45deg);
+                                        text-shadow: 0px 0px 5px rgba($enfasis,.7);
+                                    }
+                                }
+                            }
+                            &[data-estado="inactivo"]{
+                                color:white;
+                                &:hover{
+                                    background-color:rgba(black,0.6);
+                                    & > .label{
+                                        text-shadow: 0px 0px 5px rgba(white,.7);
+                                    }
+
+                                    & > .boton-add-lista{
+                                        & > i{
+                                            text-shadow: 0px 0px 5px rgba(white,.7);
+                                        }
+                                    }
+                                }
+                            }
+                            & > .label{
+                                height:100%;
+                                float:left;
+                                width:calc(100% - 38px);
+                                box-sizing: border-box;
+                                color:inherit;
+                                display: flex;
+                                padding-left: 15px;
+                                align-items: center;
+                                font-size: 12px;
+                                font-weight: 300;
+                            }
+
+                            & > .boton-add-lista{
+                                height:100%;
+                                float:left;
+                                width:38px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                box-sizing: border-box;
+                                padding-right:5px;
+                                color:inherit;
+                                & > i{
+                                    font-size: 12px;
+                                    color:inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .boton{
+                float:left;
+                margin-left:8px;
+                height:28px;
+                width:28px;
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                padding-left:6px;
+                box-sizing: border-box;
+
+
+                &[data-estado="inactivo"]{
+                    border:solid 1px white;
+                    color:white;
+                    &:hover{
+                        background-color:rgba(black,.64);
+                        color:$enfasis;
+                        border:solid 1px $enfasis;
+                       
+                        
+                    }
+                    
+                }
+                &[data-estado="activo"]{
+                    border:solid 1px $enfasis;
+                    background-color:rgba(black,.64);
+                    color:$enfasis;
+                    box-shadow: 0px 0px 5px 1px rgba($enfasis,0.7);
+                    
+                }
+                & > i{
+                    color:inherit;
+                    font-size:12px;
+                }
+                cursor:pointer;
+                @include animacion(250ms,ease-in);
+                
+            }
+
+            & .boton-l{
+                
+                height:28px;
+                width:28px;
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                padding-left:6px;
+                box-sizing: border-box;
+
+
+                &[data-estado="inactivo"]{
+                    border:solid 1px white;
+                    color:white;
+                    &:hover{
+                        background-color:rgba(black,.64);
+                        color:$enfasis;
+                        border:solid 1px $enfasis;
+                       
+                        
+                    }
+                    
+                }
+                &[data-estado="activo"]{
+                    border:solid 1px $enfasis;
+                    background-color:rgba(black,.64);
+                    color:$enfasis;
+                    box-shadow: 0px 0px 5px 1px rgba($enfasis,0.7);
+                    
+                }
+                & > i{
+                    color:inherit;
+                    font-size:12px;
+                }
+                cursor:pointer;
+                @include animacion(250ms,ease-in);
+                
+            }
+
+            & > .boton-long{
+                 float:left;
+                 margin-left:8px;
+                 height:28px;
+                 border-radius: 16px;
+                 border:solid 1px white;
+                 display: flex;
+                 box-sizing: border-box;
+                 padding-left:10px;
+                 align-items: center;
+                 color:white;
+                 cursor:pointer;
+                 @include animacion(250ms,ease-in);
+
+                 & > figure{
+                     float:left;
+                     height:26px;
+                     width:26px;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     color:inherit;
+                     & > i{
+                         color:inherit;
+                         font-size:12px;
+                     }
+                 }
+
+                 & > .label{
+                     float:left;
+                     width:calc(100% - 26px);
+                     font-size:12px;
+                     padding-right:15px;
+                     color:inherit;
+                 }
+                 
+
+                 &:hover{
+                     background-color:rgba(black,.64);
+                     color:$enfasis;
+                     border:solid 1px $enfasis;
+                 }
+            }
+        }
+    }
+
+    & > .marco{
+        height:calc(100% - 60px);
+        position:relative;
+        overflow: hidden;
+
+        & > .scroller{
+            position:relative;
+            height:100%;
+            width:400%;
+            left:0;
+
+            & > .pagina{
+                width:25%;
+                float:left;
+                height:100%;
+                position:relative;
+            }
+        }
+    }
+
+    & > .footer{
+        height:30px;
+        position:relative;
+        & > .toolbar{
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left:40px;
+            padding-right:40px;
+            & > .menu{
+                height:100%;
+
+                & > .item{
+                    height:100%;
+                    box-sizing: border-box;
+                    padding-left:15px;
+                    padding-right:15px;
+                    font-size:14px;
+                    font-weight: bold;
+                    padding-top:10px;
+                    margin-right:1px;
+                    margin-left:1px;
+                    float:left;
+                    color:white;
+                    @include animacion(250ms,ease-in);
+                    cursor:pointer;
+                    
+                    &[data-estado="activo"]{
+                        border-bottom:solid 4px $enfasis;
+                    }
+                    &[data-estado="inactivo"]{
+                        border-bottom:solid 4px $light;
+                        &:hover{
+                            text-shadow: 0px 0px 5px rgba(white,.7);
+                            border-bottom: solid 4px rgba($enfasis,.3);
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .cerrar-articulo{
+            position:absolute;
+            right:40px;
+            top:0;
+            height:100%;
+            display: flex;
+            align-items: center;
+            cursor:pointer;
+            color:white;
+            @include animacion(250ms,ease-in);
+            &:hover{
+                color:$enfasis;
+    
+                & > .icono > i{
+                    text-shadow: 0px 0px 5px rgba($enfasis,0.7);
+                }
+                & > .label{
+                    text-shadow: 0px 0px 5px rgba($enfasis,0.7);
+                }
+            }
+            & > .icono{
+                float:left;
+                height:13px;
+                margin-right:7px;
+                color:inherit;
+    
+                & > i{
+                    font-size: 13px;
+                    color:inherit;
+                }
+            }
+    
+            & > .label{
+                height:100%;
+                color:inherit;
+                float:left;
+                font-weight: 300;
+                padding-top:20px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (min-width:1600px) and (min-height:800px){
+    @import "articulo-1080";
+}

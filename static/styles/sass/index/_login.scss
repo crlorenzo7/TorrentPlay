@@ -1,0 +1,413 @@
+.cuadro-svg{
+
+    width: 354px;
+    height: 156px;
+    position: absolute;
+    top: 70px;
+    //top: calc(((100% - 145px) / 2 ) - 78px);
+    left: calc(50% - 177px);
+    opacity:0;
+    transform:translate(-100px);
+    animation:cuadro 500ms ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+.cuadro-svg-registro{
+    width: 354px;
+    height: 156px;
+    position: absolute;
+    top: 70px;
+    left: 45px;
+    opacity:0;
+    transform:translate(-100px);
+    animation:cuadro 500ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes path{
+    0% { fill: rgba(0,0,0,0); stroke-dasharray: 435;stroke-dashoffset:435}
+    50% { fill: rgba(0,0,0,0);stroke-dasharray: 435;stroke-dashoffset:0}
+    99% { fill: rgba(0,0,0,.64); stroke-dasharray: 435;stroke-dashoffset:0;stroke-opacity: 0.5;}
+    100% { fill: rgba(0,0,0,.64); stroke-dasharray: 435;stroke-dashoffset:0;stroke-opacity: 0;}
+  }
+  
+  @keyframes circulo{
+    0% {transform:scale(0.0);fill-opacity:0;stroke-dashoffset: 70;}
+    39% {transform:scale(0.0);fill-opacity:0;stroke-dashoffset: 70;}
+    40% {transform:scale(1.0);fill-opacity:0;stroke-dashoffset: 70;}
+    60% { transform:scale(1.0);fill-opacity:0;stroke-dashoffset: 0;}
+    70% { transform:scale(1.0);fill-opacity:0;stroke-dashoffset: 0; stroke:$enfasis;}
+    80%{transform:scale(0.5);stroke-dashoffset: 0;stroke-opacity: 1;}
+    100% { transform:scale(1.0);stroke-dashoffset: 0;stroke-opacity: 0;}
+  }
+
+  @keyframes circuloBoton{
+    0% {transform:scale(0.0);opacity:0;}
+    39% {transform:scale(0.0);opacity:0;}
+    40% {transform:scale(1.0);opacity:0;}
+    60% { transform:scale(1.0);opacity:0;}
+    70% { transform:scale(1.0);opacity:0;}
+    80%{transform:scale(0.5);}
+    100% { transform:scale(1.0);}
+  }
+
+
+
+  @keyframes cuadro{
+      100%{transform:translate(0px);opacity:1;}
+  }
+  
+  
+  .animate-path{
+      animation-name: path;
+      animation-fill-mode: forwards;
+      animation-duration: 800ms;
+  }
+
+
+  #cubierta-login,#cubierta-registro{
+      height:100%;
+  }
+  
+  .animate-circulo{
+    animation:circulo 1.7s ease-in;
+    animation-fill-mode:none;
+    transform-origin: 20px 50%;
+    transform:scale(1.0);
+    fill-opacity: 0;
+    stroke:white;
+    stroke-dasharray: 70;
+    stroke-dashoffset: 70;
+    stroke-opacity: 1;
+
+    fill: rgba($enfasis,0.64);
+
+    
+    
+  }
+
+  
+
+  svg{
+    cursor:pointer;
+  }
+
+  .animate-boton{
+    animation:circuloBoton 1.7s ease-in;
+  }
+
+  #marco-login-form{
+      position:absolute;
+      z-index:2;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+
+      & > form{
+          height:100%;
+      }
+
+      & .marco-boton{
+          height:100%;
+          float:left;
+          width:calc(100% - 230px);
+          position:relative;
+
+          & > .boton{
+              box-sizing: border-box;
+              border:none;
+              outline:0;
+              appearance: none;
+              height:70px;
+              width:70px;
+              position:absolute;
+              top:calc(50% - 35px);
+              left:44px;
+              opacity:0;
+              background-color:rgba($enfasis,.64);
+              @include animacion(250ms,ease-in);
+              font-size:12px;
+              cursor:pointer;
+              font-weight: 300;
+              font-family: inherit;
+              color:white;
+              border-radius: 60%;
+              
+              animation-fill-mode:none;
+              transform-origin: 50% 50%;
+              transform:scale(1.0);
+              opacity:1;
+              &:hover{
+
+                box-shadow: 0px 0px 10px 1px rgba($enfasis,0.75);
+                transform:scale(1.1);
+                
+                background-color:rgba($enfasis,1);
+            }
+
+            &:active{
+                box-shadow: none;
+                transform:scale(1.0);
+                
+                background-color:rgba($enfasis,.64);
+            }
+          }
+      }
+
+      &  .marco-form{
+          height:100%;
+          width:230px;
+          float:left;
+          position:relative;
+          box-sizing: border-box;
+          padding-top:20px;
+          & > .forgot{
+              font-size: 14px;
+              font-weight: 100;
+              color:$enfasisEnlace;
+              cursor:pointer;
+              margin-left:40px;
+              margin-bottom: 12px;
+              @include animacion(250ms,ease-in);
+              &:hover{
+                  text-shadow: 0px 0px 10px rgba($enfasisEnlace,0.7);
+              }
+          }
+
+          & > .linea{
+              height:28px;
+              margin-bottom:10px;
+              
+              & > .icono{
+                  height:100%;
+                  float:left;
+                  width:28px;
+                  box-sizing: border-box;
+                  @include animacion(250ms,ease-in);
+                  border-radius: 60%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  &[data-estado="focusOut"]{
+                    border:solid 0.8px white;
+                    color:white;
+                  }
+
+                  &[data-estado="focusIn"]{
+                    border:solid 0.8px $enfasis;
+                    color:$enfasis;
+                  }
+
+                  & > i{
+                      font-size: 16px;
+                      color:inherit;
+                  }
+              }
+              & > .cubre-input{
+                  width:calc(100% - 28px);
+                  &[data-tipo="password"]{
+                    width:119px;
+                  }
+                  height:100%;
+                  float:left;
+                  position: relative;
+
+                  & > input{
+                      appearance: none;
+                      outline:0;
+                      height:100%;
+                      width:100%;
+                      border:none;
+                      font-family: inherit;
+                      background:none;
+                      color:white;
+                      box-sizing: border-box;
+                      padding-left:15px;
+                      padding-right:15px;
+                      font-weight: 100;
+                      font-size:14px;
+                      &::placeholder{
+                          color:$light;
+                          font-weight: 100;
+                          font-size:14px;
+
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+  #marco-registro-form{
+    position:absolute;
+    z-index:2;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+
+   
+        
+
+    &  .boton{
+        position:absolute;
+        box-sizing: border-box;
+        border:none;
+        outline:0;
+        z-index:2;
+        appearance: none;
+        height:70px;
+        width:70px;
+        position:absolute;
+        top:calc(50% - 35px);
+        left:44px;
+        opacity:0;
+        background-color:rgba($enfasis,.64);
+        @include animacion(250ms,ease-in);
+        font-size:12px;
+        cursor:pointer;
+        font-weight: 300;
+        font-family: inherit;
+        color:white;
+        border-radius: 60%;
+        
+        animation-fill-mode:none;
+        transform-origin: 50% 50%;
+        transform:scale(1.0);
+        opacity:1;
+        &:hover{
+
+            box-shadow: 0px 0px 10px 1px rgba($enfasis,0.75);
+            transform:scale(1.1);
+            
+            background-color:rgba($enfasis,1);
+        }
+
+        &:active{
+            box-shadow: none;
+            transform:scale(1.0);
+            
+            background-color:rgba($enfasis,.64);
+        }
+    }
+    
+
+    &  .marco-form{
+        height:100%;
+        float:left;
+        position:relative;
+        box-sizing: border-box;
+
+        & > .linea{
+            height:28px;
+            margin-bottom:10px;
+            padding-top:3px;
+            &:nth-child(1),&:nth-child(4){
+                padding-left:70px;
+            }
+            &:nth-child(2),&:nth-child(3){
+                padding-left:125px;
+            }
+            
+            & > .icono{
+                height:100%;
+                float:left;
+                width:28px;
+                box-sizing: border-box;
+                @include animacion(250ms,ease-in);
+                border-radius: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &[data-estado="focusOut"]{
+                  border:solid 0.8px white;
+                  color:white;
+                }
+
+                &[data-estado="focusIn"]{
+                  border:solid 0.8px $enfasis;
+                  color:$enfasis;
+                }
+
+                & > i{
+                    font-size: 16px;
+                    color:inherit;
+                }
+            }
+            & > .cubre-input{
+                width:calc(100% - 28px);
+                &[data-tipo="password"]{
+                  width:119px;
+                }
+                &[data-tipo="cpassword"]{
+                    width:150px;
+                }
+
+                &[data-tipo="email"]{
+                    width:190px;
+                }
+
+                &[data-tipo="username"]{
+                    width:200px;
+                }
+
+                height:100%;
+                float:left;
+                position: relative;
+
+                & > input{
+                    appearance: none;
+                    outline:0;
+                    height:100%;
+                    width:100%;
+                    border:none;
+                    background:none;
+                    font-family: inherit;
+                    color:white;
+                    box-sizing: border-box;
+                    padding-left:15px;
+                    padding-right:15px;
+                    font-weight: 100;
+                    font-size:14px;
+                    &::placeholder{
+                        color:$light;
+                        font-weight: 100;
+                        font-size:14px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+#promo-2{
+    position:absolute;
+    height:100%;
+    box-sizing: border-box;
+    padding-top:30px;
+    right:45px;
+    & > h2{
+        font-size:30px;
+        font-weight: bold;
+        color:$enfasis;
+        margin-bottom:15px;
+    }
+
+    & > p{
+        line-height: 1.4;
+        font-weight: 300;
+        font-size: 16px;
+        color:white;
+        margin-bottom:15px;
+    }
+}
+
+
+@media (min-width:1600px) and (min-height:800px){
+    @import "index/login-1080";
+}

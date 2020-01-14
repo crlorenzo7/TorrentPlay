@@ -1,0 +1,178 @@
+#ficha-articulo{
+
+    & > .columna {
+        float: left;
+        width: 50%;
+        height: 100%;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 40px;
+        padding-right:40px; 
+
+        & > .zona-reproduccion{
+            height:70px;
+            position:absolute;
+            width:100%;
+            box-sizing: border-box;
+            top:calc(50% - 35px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & > .boton-play{
+                position:relative;
+                height:70px;
+                width:70px;
+                float:left;
+                margin-right:15px;
+                border-radius: 40px;
+                border:solid 2px white;
+                box-sizing: border-box;
+                padding-left:22px;
+                display: flex;
+                align-items: center;
+                color:white;
+                cursor:pointer;
+                @include animacion(250ms, ease-in);
+                & > i{
+                    font-size:30px;
+                    color:inherit;
+                }
+    
+                &:hover{
+                    background-color:rgba(black,.64);
+                    border:solid 2px $enfasis;
+                    color:$enfasis;
+                    box-shadow: 0px 0px 15px rgba($enfasis,.7);
+                    animation:resplandor 2000ms ease-in infinite;
+                }
+            }
+            & > .estado-vision{
+                float:left;
+                height:62px;
+                & > .label{
+                    height:30px;
+                    box-sizing: border-box;
+                    color:white;
+                    font-size: 14px;
+                    padding-top:10px;
+                }
+                & > .progress-shadow{
+                    height:3px;
+                    border-radius: 3px;
+                    background-color:rgba(black,.64);
+                    width:230px;
+                    & > .progress-bar{
+                        height:100%;
+                        width:20%;
+                        border-radius: 3px;
+                        background-color:$enfasis;
+                    }
+                }
+                & > .time-vision{
+                    height:30px;
+                    box-sizing: border-box;
+                    padding-top:7px;
+
+                    & > .texto{
+                        font-size:12px;
+                        font-weight: 300;
+                        color:white;
+                        & > .total-vision{
+                            margin-left:5px;
+                            font-weight: bold;
+                            color:$disable;
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        & > .linea-info{
+            color:white;
+            font-size:14px;
+            font-weight: 300;
+            margin-bottom:15px;
+            height:16px;
+            display: flex;
+            align-items: center;
+            & > .cali{
+                color:$enfasis;
+                font-size: 16px;
+                margin-left:5px;
+                margin-right:15px;
+            }
+
+            & > .generos{
+                color:$disable;
+            }
+        }
+
+        & > .sinopsis{
+            font-size:14px;
+            font-weight: 300;
+            color:white;
+            //max-height: 70px;
+            line-height: 1.4;
+            margin-bottom:15px;
+        }
+
+        & > .linea-detalle{
+            font-size:14px;
+            color:white;
+            font-weight: 300;
+            margin-bottom:15px;
+            & > .label{
+                font-weight: bold;
+                color:$enfasis;
+                margin-right:10px;
+            }
+        }
+
+        & > .valoracion-usuario{
+            & > .estrellas{
+                height:18px;
+                margin-bottom:7px;
+                width:210px;
+                & > .estrella{
+                    font-size: 18px;
+                    margin-right:3px;
+                    cursor:pointer;
+                    float:left;
+                    &[data-estado="inactivo"]{
+                        color:white;
+                    }
+                    &[data-estado="activo"]{
+                        color:$enfasis;
+                    }
+                }
+            }
+            & > .linea-valoracion{
+                height:18px;
+                display: flex;
+                align-items: center;
+
+                & > .muestra-valor{
+                    float:left;
+                    font-size: 12px;
+                    font-weight: 300;
+                    color:white;
+                    margin-right:10px;
+                    
+                }
+    
+                & > .valor{
+                    float:left;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color:white;
+                }
+            }
+            
+        }
+    }
+}
+
+@media (min-width:1600px) and (min-height:800px){
+    @import "articulo/ficha-1080";
+}

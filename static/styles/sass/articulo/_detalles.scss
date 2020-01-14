@@ -1,0 +1,129 @@
+#detalles-articulo{
+    & > .seccion{
+        position:relative;
+        float:left;
+        height:100%;
+        margin-right:30px;
+        box-sizing: border-box;
+        padding-bottom:20px;
+        & .cabecera{
+            &[data-type="reparto"]{
+                padding-left:40px;
+            }
+            height:40px;
+            box-sizing: border-box;
+            padding-top:17px;
+            & > .titulo{
+                font-size: 14px;
+                font-weight: bold;
+                color:$gris;
+            }
+        }
+
+        & > .cuerpo{
+            
+            &[data-type="reparto"]{
+                padding-left:34px;
+                padding-top:14px;
+            }
+            &[data-type="items"]{
+                box-sizing: border-box;
+                padding-top:20px;
+                
+            }
+            
+            height:calc(100% - 40px);
+            & > ul{
+                overflow:hidden;
+                height:100%;
+                padding-right:15px;
+                &:hover{
+                    overflow-x:hidden;
+                    overflow-y:auto;
+                }
+                & > .item{
+                    font-size: 14px;
+                    color:white;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+            }
+            & > .cuerpo-reparto{
+                box-sizing: border-box;
+                height:100%;
+                max-width: 810px;
+                padding-right:15px;
+                overflow:hidden;
+                &:hover{
+                    overflow-y:auto;
+                    overflow-x:hidden;
+                }
+                & > .actor{
+                    height:69px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin-bottom:2px;
+                    position:relative;
+                    width:260px;
+                    float:left;
+                    margin-right:2px;
+
+                    & > .continer{
+                        padding:6px;
+                        box-sizing: border-box;
+                        height:100%;
+                    }
+
+                    & > .cubierta{
+                        cursor:pointer;
+                        padding:6px;
+                        box-sizing: border-box;
+                        min-height:100%;
+                        width:100%;
+                        display:none;
+                        background-color:rgba(0,0,0,.64);
+                        position:absolute;
+                        z-index:3;
+                        top:0;
+                        left:0;
+                    }
+                    &  .imagen{
+                        float:left;
+                        width:38px;
+                        height:57px;
+                        overflow: hidden;
+                        background-color:black;
+                        & > img{
+                            @include img(auto,100%);
+                        }
+                    }
+
+                    &  .descripcion{
+                        
+                        width:calc(100% - 38px);
+                        float:left;
+                        box-sizing:border-box;
+                        padding-left:8px;
+                        padding-top:5px;
+                        & > .nombre{
+                            font-size:14px;
+                            font-weight: bold;
+                            color:white;
+                            margin-bottom:6px;
+                        }
+
+                        & > .personaje{
+                            font-size:12px;
+                            font-weight: bold;
+                            color:$enfasis;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1600px) and (min-height:800px){
+    @import "articulo/detalles-1080";
+}

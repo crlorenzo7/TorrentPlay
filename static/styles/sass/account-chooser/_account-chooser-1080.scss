@@ -1,0 +1,298 @@
+#account-chooser{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:auto;
+    padding-bottom:71px;
+
+    & > .titulo{
+
+        font-weight: bold;
+        color:white;
+        text-shadow: 0px 0px 14px rgba(white,0.7);
+        text-align: center;
+        margin-bottom:15px;
+        display: flex;
+        align-items: flex-end;
+        font-size:28px;
+        justify-content: center;
+        
+    }
+
+    & > .marco-add-perfil{
+        padding-top:11px;
+        padding-bottom:40px;
+        height:191px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > .item-add-perfil{
+            height:100%;
+            width:600px;
+            border-radius: 100px;
+            background-color:rgba(black,.64);
+            
+            & > .imagen{
+                height:191px;
+                width:191px;
+                float:left;
+                overflow:hidden;
+                padding: 33px;
+                box-sizing: border-box;
+                & > img{
+                    border-radius: 60%;
+                    @include img(100%,100%);
+                }
+            }
+
+            & > .marco-form-add-perfil{
+                float:left;
+                width:calc(100% - 191px);
+                height:100%;
+                box-sizing:border-box;
+                padding:19px;
+                
+                padding: 33px;
+                padding-left:0px;
+                padding-right: 63px;
+                &  .linea{
+                    height:43px;
+                    margin-bottom:39px;
+                    &[data-tipo="input"]{
+                        background-color:rgba(black,.64);
+                        border-radius: 25px;
+                    }
+                    &[data-tipo="boton"]{
+                        width:189.6px;
+                    }
+                    & > .icono{
+                        height:100%;
+                        float:left;
+                        width:43px;
+                        box-sizing: border-box;
+                        @include animacion(250ms,ease-in);
+                        border-radius: 60%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+      
+                        &[data-estado="focusOut"]{
+                          border:solid 0.8px white;
+                          color:white;
+                        }
+      
+                        &[data-estado="focusIn"]{
+                          border:solid 0.8px $enfasis;
+                          color:$enfasis;
+                        }
+      
+                        & > i{
+                            font-size: 24px;
+                            color:inherit;
+                        }
+                    }
+                    & > .cubre-input{
+                        width:calc(100% - 43px);
+                        height:100%;
+                        float:left;
+                        position: relative;
+      
+                        & > input{
+                            appearance: none;
+                            outline:0;
+                            height:100%;
+                            width:100%;
+                            border:none;
+                            font-family: inherit;
+                            background:none;
+                            color:white;
+                            box-sizing: border-box;
+                            padding-left:20px;
+                            padding-right:20px;
+                            font-weight: 100;
+                            font-size:20px;
+                            &::placeholder{
+                                color:$light;
+                                font-weight: 100;
+                                font-size:20px;
+      
+                            }
+                        }
+                    }
+
+                    & > .boton{
+                        height:100%;
+                        border-radius: 28px;
+                        background-color:rgba($enfasis,.64);
+                        padding-left:2px;
+                        color:white;
+                        cursor:pointer;
+                        @include animacion(250ms,ease-in);
+                        appearance: none;
+                        outline:0;
+                        border:none;
+                        font-family:inherit;
+                        &:hover{
+                            box-shadow: 0px 0px 16px 1px rgba($enfasis,.75);
+                            color:white;
+                            background-color:rgba($enfasis,0.64);
+                        }
+                        & > .icono{
+                            
+                            box-sizing: border-box;
+                            height:43px;
+                            width:43px;
+                            float:left;
+                            border-radius: 60%;
+                            //border:solid 1px rgba(white,.7);
+                            display: flex;
+                            align-items: center;
+                            
+                            justify-content: center;
+                            & > i{
+                                
+                                font-size:24px;
+                                color:inherit;
+                            }
+                        }
+                        & > .label{
+                            
+                            height:100%;
+                            display: flex;
+                            align-items: center;
+                            padding-left:8px;
+                            padding-right:24px;
+                            color:inherit;
+                            font-weight: 300;
+                            font-size:20px;
+                            float:left;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    & > .marco-perfiles{
+        padding-top:11px;
+        padding-bottom:40px;
+        height:197px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > .perfil{
+            height:100%;
+            float:left;
+            width:164px;
+            margin-right:14px;
+            margin-left:14px;
+            cursor:pointer;
+
+            @include animacion(250ms,ease-in);
+            &:hover{
+                
+
+                & > .imagen{
+                    background-color:rgba($enfasis,1);
+                    transform:rotateY(180deg);
+                    box-shadow: 0px 0px 21px 1px rgba($enfasis,.75);
+                    animation: resplandor 2000ms ease-in infinite;
+                    & > img{
+                        transform:rotateY(180deg);
+                    }
+                }
+
+                & > .label{
+                    text-shadow: 0px 0px 7px rgba(white,0.7);
+                }
+            }
+
+            & > .imagen{
+                @include animacion(800ms,ease-in);
+                height:164px;
+                background-color:rgba(black,0.64);
+                margin-bottom: 16px;
+                overflow: hidden;
+                box-sizing: border-box;
+                padding:20px;
+                border-radius: 60%;
+                & > img{
+                    @include animacion(800ms,ease-in);
+                    border-radius: 60%;
+                    @include img(100%,100%);
+                }
+            }
+
+            & > .label{
+                @include animacion(250ms,ease-in);
+                font-weight: 300;
+                font-size: 16px;
+                text-align: center;
+                color:white;
+            }
+        }
+    }
+    & > footer{
+        height:48px;
+
+        & > .controles{
+            height:100%;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+
+            & > .boton{
+                height:100%;
+                border-radius: 12px;
+                background-color:rgba(black,.64);
+                //border: solid 1px rgba(100,100,100,0.7);
+                display:flex;
+                align-items: center;
+                padding-left:2px;
+                color:white;
+                cursor:pointer;
+                @include animacion(250ms,ease-in);
+
+                &:hover{
+                    //border:solid 1px rgba(white,0.7);
+                    box-shadow: 0px 0px 16px 1px rgba($enfasis,.75);
+                    color:white;
+                    background-color:rgba($enfasis,0.64);
+                }
+                & > .icono{
+                    
+                    box-sizing: border-box;
+                    height:41px;
+                    width:41px;
+                    float:left;
+                    border-radius: 60%;
+                    //border:solid 1px rgba(white,.7);
+                    display: flex;
+                    align-items: center;
+                    
+                    justify-content: center;
+                    & > i{
+                        
+                        font-size:24px;
+                        color:inherit;
+                    }
+                }
+                & > .label{
+                    
+                    height:100%;
+                    display: flex;
+                    align-items: center;
+                    padding-left:7px;
+                    padding-right:21px;
+                    color:inherit;
+                    font-weight: 300;
+                    font-size:16px;
+                    float:left;
+                }
+            }
+        }
+    }
+}

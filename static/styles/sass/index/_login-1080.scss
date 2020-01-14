@@ -1,0 +1,281 @@
+.cuadro-svg{
+
+    width: 558px;
+    height: 245px;
+    position: absolute;
+    top: 106px;
+    //top: calc(((100% - 145px) / 2 ) - 78px);
+    left: calc(50% - 279px);
+    opacity:0;
+    transform:translate(-150px);
+    animation:cuadro 500ms ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+.cuadro-svg-registro{
+    width: 558px;
+    height: 245px;
+    position: absolute;
+    top: 106px;
+    left: 45px;
+    opacity:0;
+    transform:translate(-150px);
+    animation:cuadro 500ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+  #marco-login-form{
+
+      & .marco-boton{
+          height:100%;
+          float:left;
+          width:calc(100% - 364px);
+          position:relative;
+
+          & > .boton{
+              box-sizing: border-box;
+              border:none;
+              outline:0;
+              appearance: none;
+              height:112px;
+              width:112px;
+              position:absolute;
+              top:calc(50% - 56px);
+              left:68px;
+              opacity:0;
+              background-color:rgba($enfasis,.64);
+              @include animacion(250ms,ease-in);
+              font-size:14px;
+              cursor:pointer;
+              font-weight: 300;
+              font-family: inherit;
+              color:white;
+              border-radius: 60%;
+              
+              animation-fill-mode:none;
+              transform-origin: 50% 50%;
+              transform:scale(1.0);
+              opacity:1;
+              &:hover{
+
+                box-shadow: 0px 0px 10px 1px rgba($enfasis,0.75);
+                transform:scale(1.1);
+                
+                background-color:rgba($enfasis,1);
+            }
+
+            &:active{
+                box-shadow: none;
+                transform:scale(1.0);
+                
+                background-color:rgba($enfasis,.64);
+            }
+          }
+      }
+
+      &  .marco-form{
+          width:364px;
+          padding-top:30px;
+          & > .forgot{
+              font-size: 22px;
+              margin-left:56px;
+              margin-bottom: 20px;
+              &:hover{
+                  text-shadow: 0px 0px 16px rgba($enfasisEnlace,0.7);
+              }
+          }
+
+          & > .linea{
+              height:41px;
+              margin-bottom:18px;
+              
+              & > .icono{
+                  width:41px;
+
+                  & > i{
+                      font-size: 24px;
+                  }
+              }
+              & > .cubre-input{
+                  width:calc(100% - 41px);
+                  &[data-tipo="password"]{
+                    width:187px;
+                  }
+                  & > input{
+                      padding-left:20px;
+                      padding-right:20px;
+                      font-size:20px;
+                      &::placeholder{
+                          font-size:20px;
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+  #marco-registro-form{
+    position:absolute;
+    z-index:2;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+
+   
+        
+
+    &  .boton{
+        position:absolute;
+        box-sizing: border-box;
+        border:none;
+        outline:0;
+        z-index:2;
+        appearance: none;
+        height:112px;
+        width:112px;
+        position:absolute;
+        top:calc(50% - 56px);
+        left:68px;
+        opacity:0;
+        background-color:rgba($enfasis,.64);
+        @include animacion(250ms,ease-in);
+        font-size:14px;
+        cursor:pointer;
+        font-weight: 300;
+        font-family: inherit;
+        color:white;
+        border-radius: 60%;
+        
+        animation-fill-mode:none;
+        transform-origin: 50% 50%;
+        transform:scale(1.0);
+        opacity:1;
+        &:hover{
+
+            box-shadow: 0px 0px 15px 1px rgba($enfasis,0.75);
+            transform:scale(1.1);
+            
+            background-color:rgba($enfasis,1);
+        }
+
+        &:active{
+            box-shadow: none;
+            transform:scale(1.0);
+            
+            background-color:rgba($enfasis,.64);
+        }
+    }
+    
+
+    &  .marco-form{
+        height:100%;
+        float:left;
+        position:relative;
+        box-sizing: border-box;
+
+        & > .linea{
+            height:41px;
+            margin-bottom:22px;
+            padding-top:3px;
+            &:nth-child(1),&:nth-child(4){
+                padding-left:105px;
+            }
+            &:nth-child(2),&:nth-child(3){
+                padding-left:200px;
+            }
+            
+            & > .icono{
+                height:100%;
+                float:left;
+                width:41px;
+                box-sizing: border-box;
+                @include animacion(250ms,ease-in);
+                border-radius: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &[data-estado="focusOut"]{
+                  border:solid 0.8px white;
+                  color:white;
+                }
+
+                &[data-estado="focusIn"]{
+                  border:solid 0.8px $enfasis;
+                  color:$enfasis;
+                }
+
+                & > i{
+                    font-size: 24px;
+                    color:inherit;
+                }
+            }
+            & > .cubre-input{
+                width:calc(100% - 41px);
+                &[data-tipo="password"]{
+                  width:187px;
+                }
+                &[data-tipo="cpassword"]{
+                    width:240px;
+                }
+
+                &[data-tipo="email"]{
+                    width:310px;
+                }
+
+                &[data-tipo="username"]{
+                    width:310px;
+                }
+
+                height:100%;
+                float:left;
+                position: relative;
+
+                & > input{
+                    appearance: none;
+                    outline:0;
+                    height:100%;
+                    width:100%;
+                    border:none;
+                    background:none;
+                    font-family: inherit;
+                    color:white;
+                    box-sizing: border-box;
+                    padding-left:20px;
+                    padding-right:20px;
+                    font-weight: 100;
+                    font-size:20px;
+                    &::placeholder{
+                        color:$light;
+                        font-weight: 100;
+                        font-size:20px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+#promo-2{
+    position:absolute;
+    height:100%;
+    box-sizing: border-box;
+    padding-top:48px;
+    right:45px;
+    & > h2{
+        font-size:50px;
+        font-weight: bold;
+        color:$enfasis;
+        margin-bottom:20px;
+    }
+
+    & > p{
+        line-height: 1.4;
+        font-weight: 300;
+        font-size: 24px;
+        color:white;
+        margin-bottom:20px;
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "name": "moviefinder2",
+    "version": "1.0.0",
+    "main": "index.html",
+    "single-instance": false,
+    "window": {
+        "icon": "icon.png",
+        "title": "MovieFinder - peliculas y series online",
+        "toolbar": false,
+        "frame": false,
+        "min_width": 1024,
+        "min_height": 600,
+        "width": 1024,
+        "height": 600,
+        "position": "center",
+        "fullscreen": true
+    },
+    "dependencies": {
+        "cssparser": "^0.2.2",
+        "express": "^4.14.0",
+        "fs-extra": "^0.30.0",
+        "magnet-to-torrent": "^1.0.6",
+        "morgan": "~1.5.3",
+        "nedb": "*",
+        "nodecast-js": "^1.0.3",
+        "peerflix": "*",
+        "pump": "^1.0.1",
+        "torrent-stream": "*",
+        "unzip": "*",
+        "upnp-mediarenderer-client": "*",
+        "vlc-simple-player": "^0.5.0",
+        "xmlbuilder": "*",
+        "ytdl-core": "*"
+    },
+    "webkit": {
+        "plugin": true
+    },
+    "chromium-args": "--force-wave-audio --disable-audio-output-resampler --try-supported-channel-layouts"
+}

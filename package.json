@@ -1,0 +1,42 @@
+{
+    "name": "MovieFinder",
+    "version": "1.0.0",
+    "description": "reproductor de video a traves de archivos torrent",
+    "main": "index.js",
+    "_from": "",
+    "author": "moviefinder",
+    "dependencies": {
+        "cssparser": "^0.2.2",
+        "electron-debug": "*",
+        "express": "^4.14.0",
+        "fs-extra": "^0.30.0",
+        "magnet-link": "^1.1.3",
+        "morgan": "~1.5.3",
+        "nedb": "*",
+        "net": "*",
+        "nodecast-js": "^1.0.3",
+        "opensubtitles-api": "^5.0.1",
+        "peerflix": "*",
+        "pump": "^1.0.1",
+        "torrent-stream": "*",
+        "unzip": "*",
+        "upnp-mediarenderer-client": "*",
+        "xmlbuilder": "*",
+        "xpipe": "^1.0.5",
+        "ytdl-core": "*"
+    },
+    "files": [
+        "mpvjs.node",
+        "mpv-1.dll"
+    ],
+    "scripts": {
+        "main": "electron .",
+        "build": "electron-packager . TorrentPlay --out=../ --platform=win32 --arch=all --asar --icon=favicon.ico --overwrite",
+        "build-mac": "electron-packager . TorrentPlay --out=../ --platform=darwin --arch=all --asar --icon=favicon.icns --overwrite",
+        "build-linux": "electron-packager . TorrentPlay --out=../ --platform=linux --arch=all --asar"
+    },
+    "devDependencies": {
+        "babel-standalone": "^6.26.0",
+        "electron": "^4.0.1"
+    }
+}

@@ -1,0 +1,62 @@
+#index-header{
+    height:142px;
+    & > .logo{
+        margin-right:25px;
+        & > i{
+            font-size:82px;
+        }
+    }
+
+    & > .zona-texto{
+        & > h1{
+            padding-top:5px;
+            font-size:44px;
+            margin-bottom:5px;
+            & > span{
+                text-shadow: 0px 0px 20px rgba(white,0.7);
+            }
+        }
+
+        & > h2{
+            font-size:25px;
+        }
+    }
+}
+
+#index-content{
+    height:calc(100% - 142px);
+}
+
+#footer-skin{
+    height:230px;
+    background:radial-gradient(ellipse 100% 130px at 50% 80px,rgba(black,1) 0%,rgba(black,0) 50%);
+    background-color:$dark;
+}
+
+#nav-index{
+    bottom:230px;
+    height:27px;
+
+    & > .item{
+       margin-right:40px;
+       display: flex;
+       align-items: flex-end;
+       line-height: unset;
+
+       &[data-estado="inactivo"]{
+           font-size: 20px;
+           &:hover{
+               text-shadow:0px 0px 7px rgba(white,0.7);
+           }
+       }
+
+       &[data-estado="activo"]{
+           margin-right:40px;
+           transform:none;
+           font-size:28px;
+           text-shadow:0px 0px 14px rgba($enfasis,0.7);
+       }
+       
+
+    }
+}

@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'divx247';
+  src:  url('../fonts/divx247.eot?f0npce');
+  src:  url('../fonts/divx247.eot?f0npce#iefix') format('embedded-opentype'),
+    url('../fonts/divx247.ttf?f0npce') format('truetype'),
+    url('../fonts/divx247.woff?f0npce') format('woff'),
+    url('../fonts/divx247.svg?f0npce#divx247') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="divx247-icons"], [class*=" divx247-icons"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'divx247' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.divx247-iconsaccount:before {
+  content: "\e900";
+}
+.divx247-iconsbookmark:before {
+  content: "\e901";
+}
+.divx247-iconsclose:before {
+  content: "\e902";
+}
+.divx247-iconsdislike:before {
+  content: "\e903";
+}
+.divx247-iconsdownload:before {
+  content: "\e904";
+}
+.divx247-iconsfavorite:before {
+  content: "\e905";
+}
+.divx247-iconsfilm:before {
+  content: "\e906";
+}
+.divx247-iconsleft:before {
+  content: "\e907";
+}
+.divx247-iconslike:before {
+  content: "\e908";
+}
+.divx247-iconslogin:before {
+  content: "\e909";
+}
+.divx247-iconslogo:before {
+  content: "\e90a";
+}
+.divx247-iconsmagnet:before {
+  content: "\e90b";
+}
+.divx247-iconsnotification:before {
+  content: "\e90c";
+}
+.divx247-iconson:before {
+  content: "\e90d";
+}
+.divx247-iconsplay:before {
+  content: "\e90e";
+}
+.divx247-iconsright:before {
+  content: "\e90f";
+}
+.divx247-iconsrss:before {
+  content: "\e910";
+}
+.divx247-iconssaga:before {
+  content: "\e911";
+}
+.divx247-iconssearch:before {
+  content: "\e912";
+}
+.divx247-iconsstar:before {
+  content: "\e913";
+}
+.divx247-iconsto_list:before {
+  content: "\e914";
+}
+.divx247-iconstv:before {
+  content: "\e915";
+}
+.divx247-iconsview:before {
+  content: "\e916";
+}
+.divx247-iconsinstagram:before {
+  content: "\ea92";
+}
+.divx247-iconsyoutube:before {
+  content: "\ea9d";
+}
+.divx247-iconstumblr:before {
+  content: "\eab9";
+}

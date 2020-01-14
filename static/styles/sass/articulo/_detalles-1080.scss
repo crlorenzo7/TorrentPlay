@@ -1,0 +1,124 @@
+#detalles-articulo{
+    & > .seccion{
+        position:relative;
+        float:left;
+        height:100%;
+        margin-right:47px;
+        box-sizing: border-box;
+        padding-bottom:32px;
+        & .cabecera{
+            &[data-type="reparto"]{
+                padding-left:40px;
+            }
+            height:63px;
+            box-sizing: border-box;
+            padding-top:27px;
+            & > .titulo{
+                font-size: 20px;
+                font-weight: bold;
+                color:$gris;
+            }
+        }
+
+        & > .cuerpo{
+            
+            &[data-type="reparto"]{
+                padding-left:31px;
+                padding-top:22px;
+            }
+            &[data-type="items"]{
+                box-sizing: border-box;
+                padding-top:32px;
+                
+            }
+            
+            height:calc(100% - 63px);
+            & > ul{
+                overflow:hidden;
+                height:100%;
+                padding-right:24px;
+                &:hover{
+                    overflow-x:hidden;
+                    overflow-y:auto;
+                }
+                & > .item{
+                    font-size: 20px;
+                    color:white;
+                    font-weight: bold;
+                    margin-bottom: 16px;
+                }
+            }
+            & > .cuerpo-reparto{
+                box-sizing: border-box;
+                height:100%;
+                max-width: 1280px;
+                padding-right:24px;
+                overflow:hidden;
+                &:hover{
+                    overflow-y:auto;
+                    overflow-x:hidden;
+                }
+                & > .actor{
+                    height:109px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin-bottom:3px;
+                    position:relative;
+                    width:411px;
+                    float:left;
+                    margin-right:3px;
+
+                    & > .continer{
+                        padding:9px;
+                        box-sizing: border-box;
+                        height:100%;
+                    }
+
+                    & > .cubierta{
+                        cursor:pointer;
+                        padding:9px;
+                        box-sizing: border-box;
+                        min-height:100%;
+                        width:100%;
+                        display:none;
+                        background-color:rgba(0,0,0,.64);
+                        position:absolute;
+                        z-index:3;
+                        top:0;
+                        left:0;
+                    }
+                    &  .imagen{
+                        float:left;
+                        width:60px;
+                        height:90px;
+                        overflow: hidden;
+                        & > img{
+                            @include img(auto,100%);
+                        }
+                    }
+
+                    &  .descripcion{
+                        
+                        width:calc(100% - 60px);
+                        float:left;
+                        box-sizing:border-box;
+                        padding-left:13px;
+                        padding-top:8px;
+                        & > .nombre{
+                            font-size:20px;
+                            font-weight: bold;
+                            color:white;
+                            margin-bottom:9px;
+                        }
+
+                        & > .personaje{
+                            font-size:18px;
+                            font-weight: bold;
+                            color:$enfasis;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

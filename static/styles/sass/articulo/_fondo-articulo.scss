@@ -1,0 +1,11 @@
+ #fondo-articulo{
+     opacity:0;
+     background-color:$dark;
+     & > .imagen-fondo{
+        overflow: hidden;
+        display:none;
+        & >img{
+            @include img(auto,100%);
+        }
+     }
+ }
