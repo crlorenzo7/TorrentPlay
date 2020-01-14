@@ -1,10 +1,10 @@
 {
-    "name": "MovieFinder",
+    "name": "TorrentPlay",
     "version": "1.0.0",
     "description": "reproductor de video a traves de archivos torrent",
     "main": "index.js",
     "_from": "",
-    "author": "moviefinder",
+    "author": "CLDev",
     "dependencies": {
         "cssparser": "^0.2.2",
         "electron-debug": "*",
